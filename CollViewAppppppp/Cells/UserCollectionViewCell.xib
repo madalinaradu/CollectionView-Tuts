@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyq-17-jLX">
-                        <rect key="frame" x="0.0" y="122" width="150" height="26"/>
+                        <rect key="frame" x="15" y="122" width="120" height="26"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -33,10 +33,10 @@
             </view>
             <constraints>
                 <constraint firstItem="m8N-af-LCW" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="7h9-d3-c7Y"/>
-                <constraint firstAttribute="trailing" secondItem="xyq-17-jLX" secondAttribute="trailing" id="8PB-1q-kiU"/>
+                <constraint firstAttribute="trailing" secondItem="xyq-17-jLX" secondAttribute="trailing" constant="15" id="8PB-1q-kiU"/>
                 <constraint firstItem="m8N-af-LCW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QsD-Qp-x3j"/>
                 <constraint firstItem="xyq-17-jLX" firstAttribute="top" secondItem="m8N-af-LCW" secondAttribute="bottom" constant="2" id="UCB-nf-PRw"/>
-                <constraint firstItem="xyq-17-jLX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UN0-hW-h9Z"/>
+                <constraint firstItem="xyq-17-jLX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="UN0-hW-h9Z"/>
                 <constraint firstAttribute="bottom" secondItem="xyq-17-jLX" secondAttribute="bottom" constant="2" id="eok-ZM-c2i"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

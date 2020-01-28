@@ -17,18 +17,18 @@ class ViewController: UIViewController {
     
 //    var users = [UserModel]()
     var celebrities = [
-        ["name":"LeBron James", "image":"LeBron"], ["name":"LeBron James","image":"LeBron"],
-        ["name":"LeBron James", "image":"LeBron"], ["name":"LeBron James", "image":"LeBron"],
-        ["name":"LeBron James", "image":"LeBron"], ["name":"LeBron James","image":"LeBron"],
-        ["name":"LeBron James", "image":"LeBron"], ["name":"LeBron James", "image":"LeBron"],
-        ["name":"LeBron James", "image":"LeBron"], ["name":"LeBron James","image":"LeBron"],
-        ["name":"LeBron James", "image":"LeBron"], ["name":"LeBron James", "image":"LeBron"],
-        ["name":"LeBron James", "image":"LeBron"], ["name":"LeBron James","image":"LeBron"],
-        ["name":"LeBron James", "image":"LeBron"], ["name":"LeBron James", "image":"LeBron"],
-        ["name":"LeBron James", "image":"LeBron"], ["name":"LeBron James","image":"LeBron"],
-        ["name":"LeBron James", "image":"LeBron"], ["name":"LeBron James", "image":"LeBron"],
-        ["name":"LeBron James", "image":"LeBron"], ["name":"LeBron James","image":"LeBron"],
-        ["name":"LeBron James", "image":"LeBron"], ["name":"LeBron James", "image":"LeBron"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron","image":"LeBron"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron", "image":"LeBron"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron","image":"LeBron"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron", "image":"LeBron"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron","image":"LeBron"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron", "image":"LeBron"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron","image":"LeBron"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron", "image":"LeBron"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron","image":"LeBron"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron", "image":"LeBron"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron","image":"LeBron"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron", "image":"LeBron"],
         ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
         ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
         ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
         ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
         ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"],
+        ["name":"Hi Rez", "image":"hirez"],["name":"Hi Rez", "image":"hirez"],["name":"Hi Rez", "image":"hirez"],["name":"Hi Rez", "image":"hirez"],["name":"Hi Rez", "image":"hirez"],["name":"Hi Rez", "image":"hirez"]
 
 
     ]
@@ -78,6 +79,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserCollectionViewCellIdentifier, for: indexPath) as! UserCollectionViewCell
         let celebrity = celebrities[indexPath.row]
         cell.nameLabel.text = celebrity["name"]
+//        cell.nameLabel.text = "Test"
         cell.imageView.image = UIImage(named: celebrity["image"]!)
         return cell
     }
