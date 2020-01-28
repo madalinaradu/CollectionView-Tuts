@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var addTextField: UITextField!
+    @IBOutlet var popupView: UIView!
     @IBOutlet var collectionView: UICollectionView!
     let UserCollectionViewCellIdentifier = "UserCollectionViewCell"
     
@@ -49,6 +51,19 @@ class ViewController: UIViewController {
         let userNibCell = UINib(nibName: UserCollectionViewCellIdentifier, bundle: nil)
         collectionView.register(userNibCell, forCellWithReuseIdentifier: UserCollectionViewCellIdentifier)
         
+    }
+    
+    @IBAction func addItem(_ sender: Any) {
+        popupView.isHidden = false
+    }
+    
+    @IBAction func submitPressed(_ sender: Any) {
+        let name = addTextField.text
+        let dictionaryToAdd = ["name":name, "image":"Maluma"]
+        celebrities.append(dictionaryToAdd as! [String : String])
+        let indexPath = IndexPath(row: celebrities.count - 1, section: 0)
+        collectionView.insertItems(at: [indexPath])
+        popupView.isHidden = true
     }
     
 }
