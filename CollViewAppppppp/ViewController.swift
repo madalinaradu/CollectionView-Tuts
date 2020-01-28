@@ -70,6 +70,17 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let celebrity = celebrities[indexPath.row]
         print("\(indexPath.row) - \(celebrity["name"] ?? "Secret")")
+        
+        let alert = UIAlertController(title: "Warning!", message: "Are you sure you want to delete \(celebrity["name"] ?? "this celebrity")?", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+            self.collectionView.deleteItems(at: [indexPath])
+            self.celebrities.remove(at: indexPath.item)
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
