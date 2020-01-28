@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Erd-Yr-HTX">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1004"/>
+                                <rect key="frame" x="16" y="0.0" width="1334" height="1004"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tk1-yK-xEY">
                                     <size key="itemSize" width="50" height="50"/>
@@ -118,11 +118,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Erd-Yr-HTX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1jR-Pp-oaU"/>
+                            <constraint firstItem="Erd-Yr-HTX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1jR-Pp-oaU"/>
                             <constraint firstItem="rRX-vB-tze" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2MC-JT-dIF"/>
                             <constraint firstItem="Erd-Yr-HTX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9ZA-dk-2GD"/>
                             <constraint firstItem="rRX-vB-tze" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EbT-Rx-Ppa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Erd-Yr-HTX" secondAttribute="trailing" id="LrR-0P-GMI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Erd-Yr-HTX" secondAttribute="trailing" constant="16" id="LrR-0P-GMI"/>
                             <constraint firstItem="Dh8-Oq-vFJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="QDC-ha-CvR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rRX-vB-tze" secondAttribute="bottom" id="Vyi-Gf-aPJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rRX-vB-tze" secondAttribute="trailing" id="beL-5x-BPZ"/>
