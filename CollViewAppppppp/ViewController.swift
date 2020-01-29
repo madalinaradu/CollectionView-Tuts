@@ -17,31 +17,53 @@ class ViewController: UIViewController {
     
 //    var users = [UserModel]()
     var celebrities = [
-        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron","image":"LeBron"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron", "image":"LeBron"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron","image":"LeBron"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron", "image":"LeBron"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron","image":"LeBron"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron", "image":"LeBron"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron","image":"LeBron"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron", "image":"LeBron"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron","image":"LeBron"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron", "image":"LeBron"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron","image":"LeBron"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"LeBron", "image":"LeBron"],
-        ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
-        ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
-        ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
-        ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
-        ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
-        ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
-        ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
-        ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
-        ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"], ["name":"Nina", "image":"Nina"],
-        ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"], ["name":"J Balvin", "image":"JBalvin"],
-        ["name":"Hi Rez", "image":"hirez"],["name":"Hi Rez", "image":"hirez"],["name":"Hi Rez", "image":"hirez"],["name":"Hi Rez", "image":"hirez"],["name":"Hi Rez", "image":"hirez"],["name":"Hi Rez", "image":"hirez"]
-
-
+        ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
+        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
+        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
+        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
+        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
+        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
+        ["name":"Billie Eilish", "image":"Billie"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
+        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
+        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
+        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
+        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
+        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
+        ["name":"Billie Eilish", "image":"Billie"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
+        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
+        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
+        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
+        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
+        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
+        ["name":"Billie Eilish", "image":"Billie"],
+        ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
+        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
+        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
+        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
+        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
+        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
+        ["name":"Billie Eilish", "image":"Billie"], ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
+        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
+        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
+        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
+        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
+        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
+        ["name":"Billie Eilish", "image":"Billie"], ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
+        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
+        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
+        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
+        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
+        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
+        ["name":"Billie Eilish", "image":"Billie"], ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
+        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
+        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
+        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
+        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
+        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
+        ["name":"Billie Eilish", "image":"Billie"],
+        
     ]
     
     
@@ -60,7 +82,7 @@ class ViewController: UIViewController {
     
     @IBAction func submitPressed(_ sender: Any) {
         let name = addTextField.text
-        let dictionaryToAdd = ["name":name, "image":"Maluma"]
+        let dictionaryToAdd = ["name":name, "image":"Generic"]
         celebrities.append(dictionaryToAdd as! [String : String])
         let indexPath = IndexPath(row: celebrities.count - 1, section: 0)
         collectionView.insertItems(at: [indexPath])
@@ -76,11 +98,14 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserCollectionViewCellIdentifier, for: indexPath) as! UserCollectionViewCell
         let celebrity = celebrities[indexPath.row]
         cell.nameLabel.text = celebrity["name"]
-//        cell.nameLabel.text = "Test"
         cell.imageView.image = UIImage(named: celebrity["image"]!)
+        cell.imageViewView.layer.masksToBounds = true
+        cell.imageViewView.clipsToBounds = true
+        cell.imageViewView.layer.cornerRadius = CGFloat(roundf(Float(cell.imageViewView.frame.size.width/2.0)))
         return cell
     }
         
@@ -100,10 +125,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150.0, height: 150.0)
-    }
-    
-    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//    
+//       return CGSize(width: 110.0, height: 110.0)
+//       
+//    }
+ 
+ 
 }
 

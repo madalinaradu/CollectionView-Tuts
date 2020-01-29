@@ -9,12 +9,21 @@
 import UIKit
 
 class UserCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet var imageViewView : UIView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-
+       
+        }
+    
 }
+
+
+
+
+

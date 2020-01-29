@@ -64,8 +64,8 @@
 				4AE2800923E0A60C00DCEBD6 /* AppDelegate.swift */,
 				4AE2800B23E0A60C00DCEBD6 /* SceneDelegate.swift */,
 				4AE2800D23E0A60C00DCEBD6 /* ViewController.swift */,
-				4AE2800F23E0A60C00DCEBD6 /* Main.storyboard */,
 				4AE2801223E0A60D00DCEBD6 /* Assets.xcassets */,
+				4AE2800F23E0A60C00DCEBD6 /* Main.storyboard */,
 				4AE2801423E0A60D00DCEBD6 /* LaunchScreen.storyboard */,
 				4AE2801723E0A60D00DCEBD6 /* Info.plist */,
 			);
