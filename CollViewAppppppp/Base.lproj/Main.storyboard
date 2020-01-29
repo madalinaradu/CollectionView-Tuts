@@ -59,17 +59,18 @@
                             <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRX-vB-tze" userLabel="Popup View">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vMp-8Z-F82">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpb-y1-H83">
-                                        <rect key="frame" x="387" y="0.0" width="250" height="250"/>
+                                        <rect key="frame" x="387" y="259" width="250" height="250"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a new celebrity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmH-sq-su4">
-                                                <rect key="frame" x="30" y="44" width="151" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Try-pZ-bA0">
                                                 <rect key="frame" x="20" y="108" width="210" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="dXF-uQ-p53"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -80,6 +81,12 @@
                                                     <action selector="submitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmT-Qs-3WI"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a new celebrity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmH-sq-su4">
+                                                <rect key="frame" x="50" y="46" width="151" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -90,20 +97,25 @@
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AmH-sq-su4" secondAttribute="trailing" constant="20" symbolic="YES" id="Kbs-Ds-yo6"/>
                                             <constraint firstAttribute="height" constant="250" id="LeT-st-M76"/>
                                             <constraint firstAttribute="trailing" secondItem="7dg-4A-cKA" secondAttribute="trailing" constant="10" id="Qdu-Z8-3aX"/>
-                                            <constraint firstItem="AmH-sq-su4" firstAttribute="top" secondItem="jpb-y1-H83" secondAttribute="top" constant="44" id="Yjo-dW-SXw"/>
+                                            <constraint firstItem="AmH-sq-su4" firstAttribute="top" secondItem="jpb-y1-H83" secondAttribute="top" constant="46" id="Yjo-dW-SXw"/>
                                             <constraint firstItem="Try-pZ-bA0" firstAttribute="centerY" secondItem="jpb-y1-H83" secondAttribute="centerY" id="ZHt-ol-rn5"/>
                                             <constraint firstItem="Try-pZ-bA0" firstAttribute="centerY" secondItem="jpb-y1-H83" secondAttribute="centerY" id="gm0-Kf-ILr"/>
-                                            <constraint firstItem="AmH-sq-su4" firstAttribute="leading" secondItem="jpb-y1-H83" secondAttribute="leading" constant="30" id="pIh-G8-v4U"/>
+                                            <constraint firstItem="AmH-sq-su4" firstAttribute="leading" secondItem="jpb-y1-H83" secondAttribute="leading" constant="50" id="pIh-G8-v4U"/>
                                             <constraint firstItem="7dg-4A-cKA" firstAttribute="top" secondItem="Try-pZ-bA0" secondAttribute="bottom" constant="31" id="svl-om-XiJ"/>
                                             <constraint firstAttribute="width" constant="250" id="tbO-GJ-tAO"/>
-                                            <constraint firstItem="Try-pZ-bA0" firstAttribute="top" secondItem="AmH-sq-su4" secondAttribute="bottom" constant="43" id="vm5-aj-6Mk"/>
+                                            <constraint firstItem="Try-pZ-bA0" firstAttribute="top" secondItem="AmH-sq-su4" secondAttribute="bottom" constant="41" id="vm5-aj-6Mk"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="jpb-y1-H83" firstAttribute="top" secondItem="rRX-vB-tze" secondAttribute="top" id="IPI-eZ-b4l"/>
+                                    <constraint firstItem="vMp-8Z-F82" firstAttribute="leading" secondItem="rRX-vB-tze" secondAttribute="leading" id="0rw-ry-GWb"/>
+                                    <constraint firstItem="jpb-y1-H83" firstAttribute="centerY" secondItem="rRX-vB-tze" secondAttribute="centerY" id="5RK-tR-vpr"/>
+                                    <constraint firstItem="jpb-y1-H83" firstAttribute="top" secondItem="rRX-vB-tze" secondAttribute="top" constant="259" id="IPI-eZ-b4l"/>
+                                    <constraint firstAttribute="trailing" secondItem="vMp-8Z-F82" secondAttribute="trailing" id="SgP-J1-9R6"/>
+                                    <constraint firstAttribute="bottom" secondItem="vMp-8Z-F82" secondAttribute="bottom" id="UW1-10-RB6"/>
                                     <constraint firstItem="jpb-y1-H83" firstAttribute="centerX" secondItem="rRX-vB-tze" secondAttribute="centerX" id="hhJ-Cf-8Oc"/>
+                                    <constraint firstItem="vMp-8Z-F82" firstAttribute="top" secondItem="rRX-vB-tze" secondAttribute="top" id="j9E-uZ-cJU"/>
                                 </constraints>
                             </view>
                         </subviews>
