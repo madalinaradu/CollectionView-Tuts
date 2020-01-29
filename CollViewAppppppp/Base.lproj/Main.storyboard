@@ -15,12 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Erd-Yr-HTX">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Erd-Yr-HTX">
                                 <rect key="frame" x="16" y="0.0" width="992" height="768"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tk1-yK-xEY">
+                                <color key="backgroundColor" red="1" green="0.62702959179999995" blue="0.59535831949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uNX-ck-V0u">
                                     <size key="itemSize" width="160" height="160"/>
-                                    <size key="estimatedItemSize" width="160" height="160"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -82,7 +81,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a new celebrity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmH-sq-su4">
-                                                <rect key="frame" x="50" y="46" width="151" height="21"/>
+                                                <rect key="frame" x="50" y="46" width="180" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -94,8 +93,8 @@
                                             <constraint firstAttribute="bottom" secondItem="7dg-4A-cKA" secondAttribute="bottom" constant="29" id="DJO-jN-bak"/>
                                             <constraint firstItem="Try-pZ-bA0" firstAttribute="leading" secondItem="jpb-y1-H83" secondAttribute="leading" constant="20" id="E3c-Kc-JLe"/>
                                             <constraint firstItem="7dg-4A-cKA" firstAttribute="leading" secondItem="jpb-y1-H83" secondAttribute="leading" constant="10" id="GwR-aF-KpD"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AmH-sq-su4" secondAttribute="trailing" constant="20" symbolic="YES" id="Kbs-Ds-yo6"/>
-                                            <constraint firstAttribute="height" constant="250" id="LeT-st-M76"/>
+                                            <constraint firstAttribute="trailing" secondItem="AmH-sq-su4" secondAttribute="trailing" constant="20" symbolic="YES" id="Kbs-Ds-yo6"/>
+                                            <constraint firstAttribute="height" constant="250" id="PzO-Fj-HG2"/>
                                             <constraint firstAttribute="trailing" secondItem="7dg-4A-cKA" secondAttribute="trailing" constant="10" id="Qdu-Z8-3aX"/>
                                             <constraint firstItem="AmH-sq-su4" firstAttribute="top" secondItem="jpb-y1-H83" secondAttribute="top" constant="46" id="Yjo-dW-SXw"/>
                                             <constraint firstItem="Try-pZ-bA0" firstAttribute="centerY" secondItem="jpb-y1-H83" secondAttribute="centerY" id="ZHt-ol-rn5"/>
@@ -112,9 +111,12 @@
                                     <constraint firstItem="vMp-8Z-F82" firstAttribute="leading" secondItem="rRX-vB-tze" secondAttribute="leading" id="0rw-ry-GWb"/>
                                     <constraint firstItem="jpb-y1-H83" firstAttribute="centerY" secondItem="rRX-vB-tze" secondAttribute="centerY" id="5RK-tR-vpr"/>
                                     <constraint firstItem="jpb-y1-H83" firstAttribute="top" secondItem="rRX-vB-tze" secondAttribute="top" constant="259" id="IPI-eZ-b4l"/>
+                                    <constraint firstAttribute="trailing" secondItem="jpb-y1-H83" secondAttribute="trailing" constant="387" id="KWY-bF-xnM"/>
                                     <constraint firstAttribute="trailing" secondItem="vMp-8Z-F82" secondAttribute="trailing" id="SgP-J1-9R6"/>
                                     <constraint firstAttribute="bottom" secondItem="vMp-8Z-F82" secondAttribute="bottom" id="UW1-10-RB6"/>
+                                    <constraint firstItem="jpb-y1-H83" firstAttribute="leading" secondItem="rRX-vB-tze" secondAttribute="leading" constant="387" id="dGG-8z-WmN"/>
                                     <constraint firstItem="jpb-y1-H83" firstAttribute="centerX" secondItem="rRX-vB-tze" secondAttribute="centerX" id="hhJ-Cf-8Oc"/>
+                                    <constraint firstAttribute="bottom" secondItem="jpb-y1-H83" secondAttribute="bottom" constant="259" id="hj8-4T-wRh"/>
                                     <constraint firstItem="vMp-8Z-F82" firstAttribute="top" secondItem="rRX-vB-tze" secondAttribute="top" id="j9E-uZ-cJU"/>
                                 </constraints>
                             </view>
