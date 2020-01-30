@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A54F60F23E3471500FD71F9 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54F60E23E3471500FD71F9 /* VC2.swift */; };
 		4AE2800A23E0A60C00DCEBD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE2800923E0A60C00DCEBD6 /* AppDelegate.swift */; };
 		4AE2800C23E0A60C00DCEBD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE2800B23E0A60C00DCEBD6 /* SceneDelegate.swift */; };
 		4AE2800E23E0A60C00DCEBD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE2800D23E0A60C00DCEBD6 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A54F60E23E3471500FD71F9 /* VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
 		4AE2800623E0A60C00DCEBD6 /* CollViewAppppppp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollViewAppppppp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE2800923E0A60C00DCEBD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AE2800B23E0A60C00DCEBD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				4AE2800923E0A60C00DCEBD6 /* AppDelegate.swift */,
 				4AE2800B23E0A60C00DCEBD6 /* SceneDelegate.swift */,
 				4AE2800D23E0A60C00DCEBD6 /* ViewController.swift */,
+				4A54F60E23E3471500FD71F9 /* VC2.swift */,
 				4AE2801223E0A60D00DCEBD6 /* Assets.xcassets */,
 				4AE2800F23E0A60C00DCEBD6 /* Main.storyboard */,
 				4AE2801423E0A60D00DCEBD6 /* LaunchScreen.storyboard */,
@@ -155,6 +158,7 @@
 			files = (
 				4AE2800E23E0A60C00DCEBD6 /* ViewController.swift in Sources */,
 				4AE2802023E0BD5900DCEBD6 /* UserCollectionViewCell.swift in Sources */,
+				4A54F60F23E3471500FD71F9 /* VC2.swift in Sources */,
 				4AE2800A23E0A60C00DCEBD6 /* AppDelegate.swift in Sources */,
 				4AE2800C23E0A60C00DCEBD6 /* SceneDelegate.swift in Sources */,
 			);

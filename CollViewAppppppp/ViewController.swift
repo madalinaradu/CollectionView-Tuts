@@ -14,55 +14,20 @@ class ViewController: UIViewController {
     @IBOutlet var popupView: UIView!
     @IBOutlet var collectionView: UICollectionView!
     let UserCollectionViewCellIdentifier = "UserCollectionViewCell"
-    
+// add key:  level in dictionary [ 0,1 or 2]
+    // alert: delete, continue, cancel
+    //continue:
+    //level 0 : alert disapear , appear another alert [ Acces deny/ button  okay]
+    // level 1,2 : 
 //    var users = [UserModel]()
     var celebrities = [
-        ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
-        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
-        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
-        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
-        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
-        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
-        ["name":"Billie Eilish", "image":"Billie"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
-        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
-        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
-        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
-        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
-        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
-        ["name":"Billie Eilish", "image":"Billie"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
-        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
-        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
-        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
-        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
-        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
-        ["name":"Billie Eilish", "image":"Billie"],
-        ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
-        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
-        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
-        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
-        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
-        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
-        ["name":"Billie Eilish", "image":"Billie"], ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
-        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
-        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
-        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
-        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
-        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
-        ["name":"Billie Eilish", "image":"Billie"], ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
-        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
-        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
-        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
-        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
-        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
-        ["name":"Billie Eilish", "image":"Billie"], ["name":"LeBron", "image":"LeBron"], ["name":"Adele","image":"Adele"],
-        ["name":"Selena", "image":"Selena"], ["name":"Edd", "image":"Edd"],
-        ["name":"Shakira", "image":"Shakira"], ["name":"Bad Bunny","image":"BadBunny"],
-        ["name":"Bruno Mars", "image":"BrunoMars"], ["name":"J Balvin", "image":"JBalvin"],
-        ["name":"Nina Pastori", "image":"Nina"], ["name":"Alejandro Sanz","image":"Sanz"],
-        ["name":"Rihanna", "image":"Rihanna"], ["name":"Maluma", "image":"Maluma"],
-        ["name":"Billie Eilish", "image":"Billie"],
+        ["name":"LeBron", "image":"LeBron", "level":"1"], ["name":"Adele","image":"Adele", "level":"0"],
+        ["name":"Selena", "image":"Selena", "level":"2"], ["name":"Edd", "image":"Edd", "level":"1"],
+        ["name":"Shakira", "image":"Shakira", "level":"0"], ["name":"Bad Bunny","image":"BadBunny", "level":"2"],
+        ["name":"Bruno Mars", "image":"BrunoMars", "level":"1"], ["name":"J Balvin", "image":"JBalvin", "level":"0"],
+        ["name":"Nina Pastori", "image":"Nina", "level":"2"], ["name":"Alejandro Sanz","image":"Sanz", "level":"0"],
+        ["name":"Rihanna", "image":"Rihanna", "level":"1"], ["name":"Maluma", "image":"Maluma", "level":"1"],
+        ["name":"Billie Eilish", "image":"Billie", "level":"2"]
         
     ]
     
@@ -76,6 +41,8 @@ class ViewController: UIViewController {
         
     }
     
+    
+    //MARK: - methods
     @IBAction func addItem(_ sender: Any) {
         popupView.isHidden = false
     }
@@ -87,6 +54,7 @@ class ViewController: UIViewController {
         let indexPath = IndexPath(row: celebrities.count - 1, section: 0)
         collectionView.insertItems(at: [indexPath])
         popupView.isHidden = true
+        addTextField.text = ""
     }
     
 }
@@ -111,15 +79,17 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let celebrity = celebrities[indexPath.row]
-        print("\(indexPath.row) - \(celebrity["name"] ?? "Secret")")
         
         let alert = UIAlertController(title: "Warning!", message: "Are you sure you want to delete \(celebrity["name"] ?? "this celebrity")?", preferredStyle: .alert)
-
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: { _ in
             self.collectionView.deleteItems(at: [indexPath])
             self.celebrities.remove(at: indexPath.item)
         }))
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { action -> Void in
+                self.performSegue(withIdentifier: "VC2", sender: self)
+        }))
+
 
         self.present(alert, animated: true)
         

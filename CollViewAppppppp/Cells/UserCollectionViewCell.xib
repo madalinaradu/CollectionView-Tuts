@@ -38,21 +38,21 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyq-17-jLX">
-                        <rect key="frame" x="42" y="125" width="76" height="20.5"/>
+                        <rect key="frame" x="20" y="125" width="120" height="20.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20.5" id="lg4-Z7-db9"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="xyq-17-jLX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="42" id="6mg-Hl-89g"/>
+                <constraint firstItem="xyq-17-jLX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="6mg-Hl-89g"/>
                 <constraint firstItem="xyq-17-jLX" firstAttribute="top" secondItem="ZXP-bc-HQ3" secondAttribute="bottom" constant="12" id="XMR-t0-vSF"/>
                 <constraint firstItem="ZXP-bc-HQ3" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ZSc-Ab-4B5"/>
-                <constraint firstAttribute="trailing" secondItem="xyq-17-jLX" secondAttribute="trailing" constant="42" id="e7g-uz-CGE"/>
+                <constraint firstAttribute="trailing" secondItem="xyq-17-jLX" secondAttribute="trailing" constant="20" id="e7g-uz-CGE"/>
                 <constraint firstItem="ZXP-bc-HQ3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="wgE-9k-p65"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -62,7 +62,7 @@
                 <outlet property="imageViewView" destination="ZXP-bc-HQ3" id="DWl-sb-Deg"/>
                 <outlet property="nameLabel" destination="xyq-17-jLX" id="dY3-pf-yvV"/>
             </connections>
-            <point key="canvasLocation" x="-52" y="-90"/>
+            <point key="canvasLocation" x="-52.173913043478265" y="-90.401785714285708"/>
         </collectionViewCell>
     </objects>
 </document>
