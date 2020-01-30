@@ -15,12 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     var selectedCell:([String:String])?
     let UserCollectionViewCellIdentifier = "UserCollectionViewCell"
-// add key:  level in dictionary [ 0,1 or 2]
+    // add key:  level in dictionary [ 0,1 or 2]
     // alert: delete, continue, cancel
     //continue:
     //level 0 : alert disapear , appear another alert [ Acces deny/ button  okay]
     // level 1,2 : 
-//    var users = [UserModel]()
     var celebrities = [
         ["name":"LeBron", "image":"LeBron", "level":"1"], ["name":"Adele","image":"Adele", "level":"0"],
         ["name":"Selena", "image":"Selena", "level":"2"], ["name":"Edd", "image":"Edd", "level":"1"],
@@ -59,11 +58,11 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "goToDetailsPage" {
-            if let vc = segue.destination as? VC2 {
-                vc.celebrityInfo = self.selectedCell
-            }
-//        }
+        if let vc = segue.destination as? VC2 {
+            vc.celebrityInfo = self.selectedCell
+            
+        }
+        
     }
     
 }
@@ -85,7 +84,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.imageViewView.layer.cornerRadius = CGFloat(roundf(Float(cell.imageViewView.frame.size.width/2.0)))
         return cell
     }
-        
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let celebrity = celebrities[indexPath.row]
         
@@ -96,21 +95,24 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { action -> Void in
-                self.selectedCell = celebrity
+            self.selectedCell = celebrity
+            if celebrity["level"] != "0" {
                 self.performSegue(withIdentifier: "goToDetailsPage", sender: self)
+                
+            } else {
+                
+                let alert2 = UIAlertController(title: "", message: "Acces Denied", preferredStyle: .alert)
+                alert2.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+                self.present(alert2, animated: true)
+                
+            }
+            
         }))
-
-
+        
+        
         self.present(alert, animated: true)
         
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//    
-//       return CGSize(width: 110.0, height: 110.0)
-//       
-//    }
- 
- 
 }
 
