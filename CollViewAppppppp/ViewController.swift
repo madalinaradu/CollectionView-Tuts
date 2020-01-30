@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var addTextField: UITextField!
     @IBOutlet var popupView: UIView!
     @IBOutlet var collectionView: UICollectionView!
+    var selectedCell:([String:String])?
     let UserCollectionViewCellIdentifier = "UserCollectionViewCell"
 // add key:  level in dictionary [ 0,1 or 2]
     // alert: delete, continue, cancel
@@ -57,6 +58,14 @@ class ViewController: UIViewController {
         addTextField.text = ""
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goToDetailsPage" {
+            if let vc = segue.destination as? VC2 {
+                vc.celebrityInfo = self.selectedCell
+            }
+//        }
+    }
+    
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -87,7 +96,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { action -> Void in
-                self.performSegue(withIdentifier: "VC2", sender: self)
+                self.selectedCell = celebrity
+                self.performSegue(withIdentifier: "goToDetailsPage", sender: self)
         }))
 
 
