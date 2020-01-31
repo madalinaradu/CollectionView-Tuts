@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InitialsCollectionViewCell" id="F3I-r2-468" customClass="InitialsCollectionViewCell" customModule="CollViewAppppppp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHV-hP-Mmp" userLabel="Initials View">
+                        <rect key="frame" x="33.5" y="34" width="93" height="93"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i4f-hM-Tc9" userLabel="Initials Image View" customClass="InitialCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="AUk-su-QBU"/>
+                                    <constraint firstAttribute="width" constant="93" id="Sjc-1U-DUH"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="93" id="IsF-2X-L58"/>
+                            <constraint firstAttribute="bottom" secondItem="i4f-hM-Tc9" secondAttribute="bottom" id="NAc-ub-9Tp"/>
+                            <constraint firstAttribute="width" constant="93" id="SiJ-Cw-W4f"/>
+                            <constraint firstItem="i4f-hM-Tc9" firstAttribute="top" secondItem="HHV-hP-Mmp" secondAttribute="top" id="aeb-6d-Awv"/>
+                            <constraint firstAttribute="trailing" secondItem="i4f-hM-Tc9" secondAttribute="trailing" id="bCS-Zl-HtL"/>
+                            <constraint firstItem="i4f-hM-Tc9" firstAttribute="leading" secondItem="HHV-hP-Mmp" secondAttribute="leading" id="ll6-WN-qra"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="HHV-hP-Mmp" firstAttribute="top" secondItem="F3I-r2-468" secondAttribute="top" constant="34" id="BEQ-Mf-vgq"/>
+                <constraint firstItem="HHV-hP-Mmp" firstAttribute="centerX" secondItem="F3I-r2-468" secondAttribute="centerX" id="eu6-Zz-mCt"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="GNV-38-NSm"/>
+            <size key="customSize" width="152" height="162"/>
+            <connections>
+                <outlet property="initialsImageView" destination="i4f-hM-Tc9" id="9x0-O7-tXn"/>
+                <outlet property="initialsView" destination="HHV-hP-Mmp" id="yxM-El-ygh"/>
+            </connections>
+            <point key="canvasLocation" x="-136.23188405797103" y="-100.44642857142857"/>
+        </collectionViewCell>
+    </objects>
+</document>

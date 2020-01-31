@@ -15,11 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     var selectedCell:([String:String])?
     let UserCollectionViewCellIdentifier = "UserCollectionViewCell"
-    // add key:  level in dictionary [ 0,1 or 2]
-    // alert: delete, continue, cancel
-    //continue:
-    //level 0 : alert disapear , appear another alert [ Acces deny/ button  okay]
-    // level 1,2 : 
     var celebrities = [
         ["name":"LeBron", "image":"LeBron", "level":"1"], ["name":"Adele","image":"Adele", "level":"0"],
         ["name":"Selena", "image":"Selena", "level":"2"], ["name":"Edd", "image":"Edd", "level":"1"],
@@ -88,13 +83,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let celebrity = celebrities[indexPath.row]
         
-        let alert = UIAlertController(title: "Warning!", message: "Are you sure you want to delete \(celebrity["name"] ?? "this celebrity")?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "\(celebrity["name"] ?? "this celebrity") was selected", message: "What action do you want to proceed?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: { _ in
             self.collectionView.deleteItems(at: [indexPath])
             self.celebrities.remove(at: indexPath.item)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { action -> Void in
+        alert.addAction(UIAlertAction(title: "Continue to Details Page", style: .default, handler: { action -> Void in
             self.selectedCell = celebrity
             if celebrity["level"] != "0" {
                 self.performSegue(withIdentifier: "goToDetailsPage", sender: self)
