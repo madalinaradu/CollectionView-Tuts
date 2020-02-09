@@ -38,13 +38,13 @@ class VC2 : UIViewController, UIGestureRecognizerDelegate {
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         
-        let tapGestureRecognizerForFullImage = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        let tapGestureRecognizerForFullImage = UITapGestureRecognizer(target: self, action: #selector(fullImageTapped(tapGestureRecognizer:)))
         
         userImageViewLeft.isUserInteractionEnabled = true
         userImageViewLeft.addGestureRecognizer(tapGestureRecognizer)
         
-        fullImageView.isUserInteractionEnabled = true
-        fullImageView.addGestureRecognizer(tapGestureRecognizerForFullImage)
+        popUpView.isUserInteractionEnabled = true
+        popUpView.addGestureRecognizer(tapGestureRecognizerForFullImage)
         
     }
     
@@ -56,6 +56,14 @@ class VC2 : UIViewController, UIGestureRecognizerDelegate {
         print("A functionatt")
         
     }
+    
+    @objc func fullImageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        _ = tapGestureRecognizer.view!
+        popUpView.isHidden = !popUpView.isHidden
+        print("A functionatttt")
+        
+    }
+
     
 }
 
