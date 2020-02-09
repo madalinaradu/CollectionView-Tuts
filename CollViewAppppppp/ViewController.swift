@@ -96,7 +96,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                 
             } else {
                 
-                let alert2 = UIAlertController(title: "", message: "Acces Denied", preferredStyle: .alert)
+                let alert2 = UIAlertController(title: "", message: "Access Denied", preferredStyle: .alert)
                 alert2.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
                 self.present(alert2, animated: true)
                 

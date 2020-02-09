@@ -9,16 +9,19 @@
 import Foundation
 import UIKit
 
-class VC2 : UIViewController {
+class VC2 : UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet var initialsCollectionView: UICollectionView!
     @IBOutlet var userImageViewLeft : UIImageView!
     @IBOutlet var celebrityName: UILabel!
     @IBOutlet var celebrityLevel : UILabel!
+    @IBOutlet var fullImageView: UIImageView!
+    @IBOutlet var popUpView : UIView!
     var celebrityInfo:([String:String])?
     let InitialsCollectionViewCellIdentifier = "InitialsCollectionViewCell"
     var initials = [  ["initial":"A","initialimage":"A"], ["initial":"B","initialimage":"B"], ["initial":"C","initialimage":"C"], ["initial":"D","initialimage":"D"], ["initial":"E","initialimage":"E"]
     ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +36,26 @@ class VC2 : UIViewController {
         celebrityName.text = celebrityInfo!["name"]
         celebrityLevel.text = celebrityInfo!["level"]
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        
+        let tapGestureRecognizerForFullImage = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        
+        userImageViewLeft.isUserInteractionEnabled = true
+        userImageViewLeft.addGestureRecognizer(tapGestureRecognizer)
+        
+        fullImageView.isUserInteractionEnabled = true
+        fullImageView.addGestureRecognizer(tapGestureRecognizerForFullImage)
+        
     }
     
-    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        fullImageView.image = tappedImage.image
+
+        popUpView.isHidden = !popUpView.isHidden
+        print("A functionatt")
+        
+    }
     
 }
 
@@ -59,10 +79,5 @@ extension VC2: UICollectionViewDelegate, UICollectionViewDataSource, UICollectio
         
         return initialsCell
     }
-    
-    
-    
-    
-    
     
 }
